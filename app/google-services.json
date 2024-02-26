@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1040313221036",
+    "firebase_url": "https://station-ski-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "station-ski",
+    "storage_bucket": "station-ski.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040313221036:android:754d785eeef0ec8ebc8409",
+        "android_client_info": {
+          "package_name": "com.ejanowski.stationski"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoNZvuD9drKcdr9ctG1VPBmclSao988VM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

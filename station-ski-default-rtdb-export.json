@@ -1,0 +1,31 @@
+{
+  "lifts": [
+    {
+      "name": "LA BURGE",
+      "status": true,
+      "type": "telesiege"
+    },
+    {
+      "name": "LA TROÏKA",
+      "status": true,
+      "type": "teleski"
+    },
+    {
+      "name": "LE MOULIN",
+      "status": true,
+      "type": "teleski"
+    },
+    {
+      "name": "LES AMOUREUX",
+      "status": true,
+      "type": "teleski"
+    }
+  ],
+  "slopes": [
+    {
+      "level": 1,
+      "name": "LA MONTHERY",
+      "status": true
+    }
+  ]
+}
