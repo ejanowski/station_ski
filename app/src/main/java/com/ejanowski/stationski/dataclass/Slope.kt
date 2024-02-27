@@ -2,7 +2,7 @@ package com.ejanowski.stationski.dataclass
 
 import com.ejanowski.stationski.R
 
-class Slope(var name: String = "", var level: Int = 0, var status: Boolean = true)
+class Slope(var name: String = "", var level: Int = 0, var status: Boolean = true, var index: Int = 0)
 
 enum class Difficulty {
     GREEN, BLUE, RED, BLACK;

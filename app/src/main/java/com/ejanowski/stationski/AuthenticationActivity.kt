@@ -21,18 +21,24 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import com.ejanowski.stationski.dataclass.DataBaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class AuthenticationActivity : ComponentActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         auth = Firebase.auth
+        database = Firebase.database.reference
+
         val currentUser = auth.currentUser
         if (currentUser != null) {
             goToSlopes()
@@ -94,6 +100,11 @@ class AuthenticationActivity : ComponentActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    auth.currentUser?.let {
+                        //database.ref("users/" + it.uid + "/profile").set(it);
+                        database.child("users").child(it.uid).setValue(it.displayName ?: "unknow")
+                    }
+
                     goToSlopes()
                 } else {
                     // If sign in fails, display a message to the user.
