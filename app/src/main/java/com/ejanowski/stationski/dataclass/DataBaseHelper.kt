@@ -1,4 +1,4 @@
-package com.ejanowski.stationski
+package com.ejanowski.stationski.dataclass
 
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
